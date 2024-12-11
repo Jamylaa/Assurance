@@ -19,6 +19,31 @@ target/
 *.iml
 *.ipr
 
+
+# Exclure les fichiers de construction
+/target/
+*.jar
+*.war
+*.ear
+
+# Exclure les fichiers IDE
+*.iml
+.idea/
+*.classpath
+*.project
+*.settings/
+
+# Exclure les logs
+*.log
+*.out
+
+# Exclure les fichiers système
+.DS_Store
+Thumbs.db
+
+# Exclure les fichiers personnels
+*.env
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
