@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tn.esprit.AssuranceJamila.Entities.Beneficiaire;
 import tn.esprit.AssuranceJamila.Repositories.IBeneficiaireRepository;
+import tn.esprit.AssuranceJamila.Services.BeneficiaireService;
 import tn.esprit.AssuranceJamila.Services.IBeneficiaireService;
 
 @RestController
@@ -13,7 +14,7 @@ import tn.esprit.AssuranceJamila.Services.IBeneficiaireService;
 @AllArgsConstructor
 //@Tag(name="a")
 public class BeneficiareRestController {
-    IBeneficiaireService beneficiaireService;
+    BeneficiaireService beneficiaireService;
 
     @PostMapping("/add_beneficiaire")
     public Beneficiaire ajouterBeneficiaire(@RequestBody Beneficiaire bf){

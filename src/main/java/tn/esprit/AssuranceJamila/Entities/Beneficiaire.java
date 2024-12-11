@@ -3,6 +3,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
+
+
 @Entity
 @Getter
 @Setter
@@ -25,6 +27,10 @@ public class Beneficiaire {
     public void setSalaire(float salaire) {this.salaire = salaire;}
 
     public String getProfession() {return profession;}
+
+    public void setAssurances(List<Assurance> assurances) {
+        this.assurances = assurances;
+    }
 
     public void setProfession(String profession) {this.profession = profession;}
 
@@ -49,7 +55,7 @@ public class Beneficiaire {
    // public void setAssurances(List<Assurance> assurances) {this.assurances = assurances;}
 
     //@OneToMany(mappedBy = "beneficiare", cascade = CascadeType.ALL)
-    @OneToMany
+    @OneToMany(mappedBy = "beneficiaire")
 private List<Assurance> assurances;
 
 }
